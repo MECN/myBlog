@@ -57,15 +57,12 @@ export default {
     data() {
         return {
             navBarFixed: false,
-            sideBarFixed: false,
             offsetTop:'',
-            sideBaroffsetTop:'',
         };
     },
     mounted() {
         window.addEventListener("scroll", this.handleScroll);
         this.offsetTop = document.querySelector(".navbar").offsetTop;
-        this.sideBaroffsetTop=document.querySelector("#sidebar").offsetTop;
     },
     created() {},
     methods: {
@@ -81,11 +78,6 @@ export default {
                 this.navBarFixed = true;
             } else {
                 this.navBarFixed = false;
-            }
-            if (scrollTop > this.sideBaroffsetTop) {
-                this.sideBarFixed = true;
-            } else {
-                this.sideBarFixed = false;
             }
         }
     }
@@ -103,7 +95,10 @@ export default {
     color: #2c3e50;
     /* margin-top: 60px; */
 }
-
+.container{
+    width: 1170px;
+    margin: 20px auto 0;
+}
 #header {
     padding: 151px 20px 42px 20px;
     background: #515865 url("./assets/img/blog_topbg.jpg") center center no-repeat;
