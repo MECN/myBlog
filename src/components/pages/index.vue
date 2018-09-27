@@ -208,7 +208,7 @@ export default {
                 document.body.scrollTop;
             console.log(scrollTop);
             let sideRight=Math.ceil((document.body.clientWidth-1170)/2)+8+'px';
-            console.log(sideRight)
+            // console.log(sideRight)
             console.log('sideBaroffsetTop'+this.sideBaroffsetTop);
             if (scrollTop >parseInt(this.sideBaroffsetTop-68) ) {
                 this.sideBarFixed = true;

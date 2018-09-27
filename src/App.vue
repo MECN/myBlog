@@ -74,7 +74,7 @@ export default {
                 window.pageYOffset ||
                 document.documentElement.scrollTop ||
                 document.body.scrollTop;
-            console.log(scrollTop);
+            // console.log(scrollTop);
            
             console.log('offsetTop'+this.offsetTop);
             if (scrollTop > this.offsetTop) {
