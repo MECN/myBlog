@@ -134,7 +134,7 @@
                 </div>
             </div>
         </section>
-        <aside class="fl" id="sidebar">
+        <aside class="fl" id="sidebar" :class="{sidebarFix:sideBarFixed}">
             <aside id="blog-search">
                 <form method="get" id="searchform" class="clear" action="">
                     <input class="search-input fl" type="text" name="keyword" id="s" placeholder="搜索关键词...">
@@ -188,7 +188,38 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            sideBarFixed: false,
+            sideBaroffsetTop:'',
+        };
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+        this.sideBaroffsetTop=document.querySelector("#sidebar").offsetTop;
+    },
+    created() {},
+    methods: {
+        handleScroll() {
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+            console.log(scrollTop);
+            let sideRight=Math.ceil((document.body.clientWidth-1170)/2)+8+'px';
+            console.log(sideRight)
+            console.log('sideBaroffsetTop'+this.sideBaroffsetTop);
+            if (scrollTop >parseInt(this.sideBaroffsetTop-68) ) {
+                this.sideBarFixed = true;
+                document.querySelector("#sidebar").style.right=sideRight;
+                console.log(document.querySelector("#sidebar").offsetTop)
+            } else {
+                this.sideBarFixed = false;
+            }
+        }
+    }
+};
 </script>
 
 <style scoped>
