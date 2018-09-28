@@ -80,6 +80,12 @@ export default {
                 this.navBarFixed = false;
             }
         }
+    },
+    watch:{
+        $route(to,from){
+            // this.navBarFixed=false;
+            document.documentElement.scrollTop=0;
+        }
     }
 };
 </script>

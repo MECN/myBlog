@@ -1,6 +1,6 @@
 <template>
     <div>
-        <aside class="fl" id="sidebar" :class="{sidebarFix:sideBarFixed}">
+        <aside class="fr" id="sidebar" :class="{sidebarFix:sideBarFixed}">
             <aside id="blog-search">
                 <form method="get" id="searchform" class="clear" action="">
                     <input class="search-input fl" type="text" name="keyword" id="s" placeholder="搜索关键词...">
@@ -85,6 +85,11 @@ export default {
         this.sideBarFixed = false;
       }
     }
+  },
+  watch:{
+      $route(to,from){
+        //   this.sideBarFixed=false;
+      }
   }
 };
 </script>
