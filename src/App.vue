@@ -49,9 +49,11 @@
         </header>
         <!-- 引入路由 -->
         <router-view/>
+        <footer-bar></footer-bar>
     </div>
 </template>
 <script>
+import footerBar from "@/components/component/footer"
 export default {
     name: "App",
     data() {
@@ -84,8 +86,14 @@ export default {
     watch:{
         $route(to,from){
             // this.navBarFixed=false;
+            console.log('90909090')
+            window.pageYOffset=0;
+            document.body.scrollTop=0;
             document.documentElement.scrollTop=0;
         }
+    },
+    components:{
+        footerBar,
     }
 };
 </script>

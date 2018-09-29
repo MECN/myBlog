@@ -1,6 +1,6 @@
 <template>
     <div class="container clear">
-        <art-list></art-list>
+        <!-- <art-list></art-list> -->
         <side-bar></side-bar>
     </div>
 </template>
