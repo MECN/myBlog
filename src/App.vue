@@ -76,11 +76,13 @@ export default {
             // console.log(scrollTop);
            
             console.log('offsetTop'+this.offsetTop);
-            if (scrollTop > this.offsetTop) {
-                this.navBarFixed = true;
-            } else {
-                this.navBarFixed = false;
-            }
+            // 优雅代码
+            scrollTop>this.offsetTop?this.navBarFixed=true:this.navBarFixed=false;
+            // if (scrollTop > this.offsetTop) {
+            //     this.navBarFixed = true;
+            // } else {
+            //     this.navBarFixed = false;
+            // }
         }
     },
     watch:{

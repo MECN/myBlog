@@ -14,77 +14,76 @@
 
 <script>
 export default {
-    data(){
-        return {
-            TOP:false,
-        }
+  data() {
+    return {
+      TOP: false
+    };
+  },
+  methods: {
+    toTop() {
+      window.pageYOffset = 0;
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     },
-    methods:{
-        toTop(){
-            window.pageYOffset=0;
-            document.body.scrollTop=0;
-            document.documentElement.scrollTop=0;
-        },
-        topScroll() {
-            let scrollTop =
-                window.pageYOffset ||
-                document.documentElement.scrollTop ||
-                document.body.scrollTop;
-            console.log('toptop*****'+scrollTop);
-           
-            if (scrollTop > 50) {
-                this.TOP = true;
-                
-            } else {
-                this.TOP = false;
-            }
-        }
-    },
-    mounted(){
-        window.addEventListener("scroll", this.topScroll);
+    topScroll() {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      console.log("toptop*****" + scrollTop);
+      //    优雅代码
+      scrollTop > 50 ? (this.TOP = true) : (this.TOP = false);
+      // if (scrollTop > 50) {
+      //     this.TOP = true;
+
+      // } else {
+      //     this.TOP = false;
+      // }
     }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.topScroll);
+  }
 };
 </script>
 
 <style scoped>
-
 #footer {
-    margin-top: 40px
+  margin-top: 40px;
 }
 
 #footer a {
-    color: #fff
+  color: #fff;
 }
 
 #footer a:hover {
-    color: #16a085
+  color: #16a085;
 }
 
 .copyright {
-    color: #fff;
-    margin: 0 auto;
-    background-color: #0b445b;
-    padding: 30px 0 30px 0;
-    position: relative;
-    text-align: center
+  color: #fff;
+  margin: 0 auto;
+  background-color: #0b445b;
+  padding: 30px 0 30px 0;
+  position: relative;
+  text-align: center;
 }
 .copyright a {
-    color: #c1c1c1
+  color: #c1c1c1;
 }
-.toTop{
-    width: 48px;
-    height: 48px;
-    background: url(../../assets/img/toTop.png) no-repeat center center;
-    right: 30px;
-    bottom:120px;
-    cursor: pointer;
-    opacity: 0;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    transition: all .5s ease-in;
-
+.toTop {
+  width: 48px;
+  height: 48px;
+  background: url(../../assets/img/toTop.png) no-repeat center center;
+  right: 30px;
+  bottom: 120px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
-.fadeIn{
-    opacity: 1;
+.fadeIn {
+  opacity: 1;
 }
 </style>

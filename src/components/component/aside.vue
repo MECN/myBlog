@@ -95,7 +95,25 @@ export default {
     width: 350px;
     margin:0 15px;
     text-align: left;
+    height: 650px;
+    overflow-y: scroll
 }
+#sidebar::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+    }
+#sidebar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px rgba(248, 231, 231, 0.2);
+        -webkit-box-shadow: inset 0 0 5px rgba(248, 231, 231, 0.2);
+        background: rgb(201, 181, 240);
+    }
+#sidebar::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        box-shadow: inset 0 0 5px rgba(248, 231, 231, 0.2);
+        -webkit-box-shadow: inset 0 0 5px rgba(248, 231, 231, 0.2);
+        border-radius: 5px;
+        background: rgb(255, 255, 255);
+    }
 #searchform {
     padding: 20px;
     margin-bottom: 20px;
