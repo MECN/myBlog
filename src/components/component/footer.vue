@@ -30,7 +30,7 @@ export default {
                 window.pageYOffset ||
                 document.documentElement.scrollTop ||
                 document.body.scrollTop;
-            // console.log(scrollTop);
+            console.log('toptop*****'+scrollTop);
            
             if (scrollTop > 50) {
                 this.TOP = true;
@@ -78,70 +78,13 @@ export default {
     right: 30px;
     bottom:120px;
     cursor: pointer;
-    /* opacity: 0; */
+    opacity: 0;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+
 }
 .fadeIn{
-    animation-name:fadeIn;
-    animation-duration: 1s;
-    animation-iteration-count:1;
-    animation-delay: 0s;
-    -webkit-animation-name: fadeIn;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count:1;
-    -webkit-animation-delay: 0s;
-}
-@keyframes fadeIn{
-    0% {
-    opacity: 0;
-    }
-    50% {
-    opacity: 0.5; 
-    }
-    100% {
-    opacity: 1; 
-    }
-}
-@-webkit-keyframes fadeIn {
-    0% {
-    opacity: 0;
-    }
-    50% {
-    opacity: 0.5; 
-    }
-    100% {
-    opacity: 1; 
-    }
-}
-.fadeOut{
-    animation-name:fadeOut;
-    animation-duration: 1s;
-    animation-iteration-count:1;
-    animation-delay: 0s;
-    -webkit-animation-name: fadeOut;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count:1;
-    -webkit-animation-delay: 0s;
-}
-@keyframes fadeOut{
-    0% {
     opacity: 1;
-    }
-    50% {
-    opacity: 0.5; 
-    }
-    100% {
-    opacity: 0; 
-    }
-}
-@-webkit-keyframes fadeOut {
-    0% {
-    opacity: 1;
-    }
-    50% {
-    opacity: 0.5; 
-    }
-    100% {
-    opacity: 0; 
-    }
 }
 </style>
