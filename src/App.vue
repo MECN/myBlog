@@ -174,7 +174,7 @@ export default {
 }
 
 .menu-nav .menu-item .menu-itemTxt.act {
-    background-color: #0b445b;
+    background-color: #113442;
     border-bottom: 3px solid #16a085;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
